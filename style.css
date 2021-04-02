@@ -1,9 +1,22 @@
 @font-face {
     font-display: swap;
-    font-family: 'Fauna One', serif;;
+    font-family: 'Fauna One', serif;
     font-style: normal;
     font-weight: 400;
     src: url('./font/FaunaOne-Regular.woff') format('woff2');
 }
-body { margin: 0;}
-.intro-title {align-items:center;border:2px solid #333;box-sizing:border-box;display:flex;font-family:'Fauna One', serif;height:300px;padding:12px;width:100%}
+
+body { 
+    margin: 0;
+}
+
+.intro-title {
+    align-items: center;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Fauna One', serif;
+    height: 300px;
+    padding: 12px;
+    width: 100%
+}

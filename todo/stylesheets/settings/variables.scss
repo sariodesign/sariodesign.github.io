@@ -1,0 +1,105 @@
+// COLORS
+$color-black: #020713;
+$color-red: #CD5050;
+$color-green: #82C94E;
+$color-dark-blue: #202A43;
+$color-dark-blue2: #212944;
+$color-dark-blue3: #27334F;
+$color-gray-blue: #425277;
+$color-night-blue: #141B2C;
+$color-night-blue2: #1F2942;
+$color-light-blue: #CBDDF0;
+$color-light-blue2: #A9C8E8;
+$color-light-blue3: #4788c7;
+$color-light-blue4: #74ACE2;
+
+$color-active: $color-light-blue3;
+$color-active-hover: $color-light-blue4;
+
+// FONTS
+$font-bold: 'Poppins Bold';
+$font-regular: 'Poppins Regular';
+$font-medium: 'Poppins Medium';
+$font-semi-bold: 'Poppins Semi-Bold';
+
+// MEDIA QUERY SIZES
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+
+// SPACING
+$base-space-bottom: 30px;
+
+// PLACEHOLDER
+%block-item {
+    align-items: center;
+    background-color: $color-night-blue;
+    border-radius: 12px;
+    color: $color-light-blue;
+    display: flex;
+    font-family: $font-medium;
+    font-weight: 500;
+    min-height: 60px;
+    padding: 8px 0;
+}
+
+%priority-dot {
+    background-color: $color-gray-blue;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    height: 10px;
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+}
+
+// KEYFRAMES
+@keyframes entryAnimation {
+    0% {
+       transform: rotateX(60deg)  translateY(-20px);
+       opacity: 0;
+    }
+    10%{
+        transform: rotateX(52deg)  translateY(-16px);
+        opacity: .15;
+    }
+    20% {
+        transform: rotateX(44deg)  translateY(-12px);
+        opacity: .35;
+    }
+    30% {
+        transform: rotateX(36deg)  translateY(-8px);
+        opacity: .55;
+    }
+    40% {
+        transform: rotateX(28deg)  translateY(-4px);
+        opacity: .75;
+    }
+    50% {
+        transform: rotateX(20deg)  translateY(0px);
+        opacity: 1;
+    }
+    60% {
+        transform: rotateX(14deg)  translateY(0px);
+        opacity: 1;
+    }
+    70% {
+        transform: rotateX(8deg)  translateY(0px);
+        opacity: 1;
+    }
+    80% {
+        transform: rotateX(4deg)  translateY(0px);
+        opacity: 1;
+    }
+    90% {
+        transform: rotateX(2deg)  translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(0deg)  translateY(0px);
+        opacity: 1;
+    }
+  }

@@ -1,0 +1,74 @@
+@mixin toggle() {
+    $height: 32px;
+    $width: 60px;
+
+    align-items: center;
+    display: flex;
+    position: relative;
+    height: $height;
+
+    &:hover {
+        .toggle__state {
+            background-color: $color-dark-blue3
+        }
+    }
+
+    &__label {
+        color: $color-light-blue;
+        font-family: $font-regular;
+        font-size: 12px;
+        margin-right: 10px;
+        white-space: nowrap;
+
+        @media (min-width: $tablet) {
+            margin-right: 20px;
+        }
+    }
+    
+    &__state {
+        background-color: $color-dark-blue2;
+        border-radius: 14px;
+        left: 0;
+        position: relative;
+        top: 0;
+        height: $height;
+        width: $width;
+
+        &:after {
+            background-color: $color-gray-blue;
+            border-radius: 50%;
+            cursor: pointer;
+            content: '';
+            left: 3px;
+            height: 26px;
+            pointer-events: none;
+            position: absolute;
+            top: 3px;
+            transition: all .3s ease-in-out;
+            width: 26px;
+            z-index: 1;
+        }
+    }
+
+    &__checkbox {
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        height: 100%;
+        margin: 0;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        &:checked + .toggle__state {
+            background-color: $color-dark-blue2;
+        }
+
+        &:checked + .toggle__state:after {
+            background-color: $color-light-blue;
+            left: 29px;
+        }
+    }
+
+}

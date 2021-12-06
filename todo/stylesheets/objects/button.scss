@@ -1,0 +1,25 @@
+.btn {
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: $font-medium;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    padding: 8px 12px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    &--primary {
+        background: $color-gray-blue;
+        color: $color-light-blue;
+        width: 90px;
+    }
+
+    &--success {
+        background-color: $color-green;
+        color: #fff;
+        width: 123px;
+    }
+}

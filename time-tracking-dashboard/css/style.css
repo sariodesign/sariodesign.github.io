@@ -1,0 +1,37 @@
+.wrapper {
+    display: flex;
+    column-gap: 15px;
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+  
+  .tab-item {
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+  
+  .tab-item.active:after {
+    background-color: orange;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+  }
+  
+  .section-card {
+    display: flex;
+    gap: 15px;
+  }
+  
+  @media (min-width: 1024px) {
+    .section-card {
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .card {
+      width: calc((100% - 30px) / 3);
+    }
+  }

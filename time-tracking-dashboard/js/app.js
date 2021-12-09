@@ -1,12 +1,15 @@
-fetch('./data.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+import fetchTime from "./fetchTime";
 
-const timeReference = document.querySelectorAll('.js-time-reference');
+fetchTime();
 
-timeReference.forEach( time => {
-  time.addEventListener('click', (e) => {
-    let timeReference = e.target.dataset.timeRef;
-    console.log(timeReference);
+const timeTabs = document.querySelectorAll(".tab-item");
+
+timeTabs.forEach((tab) => {
+  tab.addEventListener("click", (e) => {
+    timeTabs.forEach((el) => el.classList.remove("active"));
+    let tabSelected = e.target;
+    tabSelected.classList.add("active");
+    let timeReference = tabSelected.dataset.timeRef;
+    fetchTime(timeReference);
   });
-})
+});

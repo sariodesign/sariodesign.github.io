@@ -1,4 +1,4 @@
-import fetchTime from "./fetchTime";
+import fetchTime from "./js/fetchTime.js";
 
 fetchTime();
 

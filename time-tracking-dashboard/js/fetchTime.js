@@ -1,6 +1,8 @@
 export default (time = "daily") => {
     const currentHour = document.querySelectorAll(".card-current-hour");
     const previousHour = document.querySelectorAll(".card-previous-hour");
+
+    console.log("Test");
   
     fetch("./data.json")
       .then((response) => response.json())

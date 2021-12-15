@@ -61,19 +61,20 @@
 
 .section-card {
   display: flex;
+  flex-direction: column;
   gap: 15px;
 }
-
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .section-card {
     flex-wrap: wrap;
   }
 }
+
 .card {
   font-family: "Rubik", sans-serif;
   position: relative;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .card {
     width: calc((100% - 30px) / 3);
   }

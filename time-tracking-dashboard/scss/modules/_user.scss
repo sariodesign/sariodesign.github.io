@@ -1,14 +1,16 @@
 .user {
     background-color: var(--blue);
+    border-radius: 12px;
     display: flex;
+    gap: 16px;
     padding: 20px;
 }
 
 .user-avatar {
     border: 2px solid #fff;
     border-radius: 50%;
-    height: 88px;
-    width: 88px;
+    height: 68px;
+    width: 68px;
 
     img {
         max-width: 100%;

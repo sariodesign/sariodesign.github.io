@@ -24,8 +24,8 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
   
 .card {
     font-family: 'Rubik', sans-serif;
-    border-radius: 12px 12px 0 0;
-    min-height: 110px;
+    border-radius: 12px;
+    min-height: 150px;
     position: relative;
 
     @media (min-width: 1440px) {
@@ -35,11 +35,11 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
 
 .card-content {
     background-color: var(--dark-blue);
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
     box-sizing: border-box;
     bottom: 0;
     left: 0;
-    height: 90px;
+    height: 122px;
     padding: 20px;
     position: absolute;
     width: 100%;
@@ -49,7 +49,7 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
     color: var(--pale-blue);
     font-size: 18px;
     font-weight: 400;
-    margin: 0;
+    margin: 0 0 16px;
 }
 
 .card-hour {

@@ -33,15 +33,17 @@ body {
 
 .user {
   background-color: var(--blue);
+  border-radius: 12px;
   display: flex;
+  gap: 16px;
   padding: 20px;
 }
 
 .user-avatar {
   border: 2px solid #fff;
   border-radius: 50%;
-  height: 88px;
-  width: 88px;
+  height: 68px;
+  width: 68px;
 }
 .user-avatar img {
   max-width: 100%;
@@ -93,8 +95,8 @@ body {
 
 .card {
   font-family: "Rubik", sans-serif;
-  border-radius: 12px 12px 0 0;
-  min-height: 110px;
+  border-radius: 12px;
+  min-height: 150px;
   position: relative;
 }
 @media (min-width: 1440px) {
@@ -105,11 +107,11 @@ body {
 
 .card-content {
   background-color: var(--dark-blue);
-  border-radius: 12px 12px 0 0;
+  border-radius: 12px;
   box-sizing: border-box;
   bottom: 0;
   left: 0;
-  height: 90px;
+  height: 122px;
   padding: 20px;
   position: absolute;
   width: 100%;
@@ -119,7 +121,7 @@ body {
   color: var(--pale-blue);
   font-size: 18px;
   font-weight: 400;
-  margin: 0;
+  margin: 0 0 16px;
 }
 
 .card-hour {

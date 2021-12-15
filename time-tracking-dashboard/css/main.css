@@ -133,6 +133,14 @@ body {
 
 .tab-list {
   background-color: var(--dark-blue);
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  padding: 0 20px;
+}
+@media (min-width: 1440px) {
+  .tab-list {
+    flex-direction: column;
+  }
 }
 
 .tab-item {
@@ -140,11 +148,6 @@ body {
   margin-bottom: 8px;
 }
 
-.tab-item.active:after {
-  background-color: orange;
-  border-radius: 50%;
-  content: "";
-  display: inline-block;
-  height: 5px;
-  width: 5px;
+.tab-item.active {
+  color: var(--pale-blue);
 }

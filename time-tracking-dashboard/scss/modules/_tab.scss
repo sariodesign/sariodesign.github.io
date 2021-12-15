@@ -1,5 +1,12 @@
 .tab-list {
     background-color: var(--dark-blue);
+    border-radius: 0 0 12px 12px;
+    display: flex; 
+    padding: 0 20px;
+
+    @media (min-width: 1440px) {
+        flex-direction: column;
+    }
 }
 
 .tab-item {
@@ -8,12 +15,7 @@
 }
 
 .tab-item {
-    &.active:after {
-        background-color: orange;
-        border-radius: 50%;
-        content: "";
-        display: inline-block;
-        height: 5px;
-        width: 5px;
+    &.active {
+        color: var(--pale-blue);
     }
 }

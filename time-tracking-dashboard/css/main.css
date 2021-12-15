@@ -114,10 +114,21 @@ body {
 
 .card-current-hour {
   color: var(--pale-blue);
+  font-size: 24px;
+  font-weight: 300;
+}
+.card-current-hour:after {
+  content: "hrs";
 }
 
 .card-previous-hour {
   color: var(--desaturated-blue);
+}
+.card-previous-hour:before {
+  content: "Last weeks - ";
+}
+.card-previous-hour:after {
+  content: "hrs";
 }
 
 .tab-list {

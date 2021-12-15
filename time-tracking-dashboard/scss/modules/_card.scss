@@ -60,8 +60,22 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
 
 .card-current-hour {
     color: var(--pale-blue);
+    font-size: 24px;
+    font-weight: 300;
+
+    &:after {
+        content: 'hrs';
+    }
 }
 
 .card-previous-hour {
-    color: var(--desaturated-blue);  
+    color: var(--desaturated-blue);
+
+    &:before {
+        content: 'Last weeks - ';
+    }
+    
+    &:after {
+        content: 'hrs';
+    }
 }

@@ -17,8 +17,13 @@
   .wrapper {
     display: flex;
     column-gap: 15px;
+    flex-direction: column;
     margin: 0 auto;
     max-width: 1024px;
+
+    @media (min-width: 1440px) {
+      flex-direction: row;
+    }
   }
 
   @import 'modules/user';

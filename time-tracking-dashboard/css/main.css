@@ -16,8 +16,14 @@
 .wrapper {
   display: flex;
   column-gap: 15px;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 1024px;
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    flex-direction: row;
+  }
 }
 
 .user {
@@ -65,6 +71,7 @@
 }
 .card {
   font-family: "Rubik", sans-serif;
+  position: relative;
 }
 @media (min-width: 1024px) {
   .card {
@@ -74,11 +81,16 @@
 
 .card-content {
   background-color: var(--dark-blue);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .card-title {
   color: var(--pale-blue);
   font-size: 18px;
+  font-weight: 400;
 }
 
 .card-hour {

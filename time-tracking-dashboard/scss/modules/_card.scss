@@ -25,6 +25,7 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
   
 .card {
     font-family: 'Rubik', sans-serif;
+    position: relative;
 
     @media (min-width: 1024px) {
         width: calc((100% - 30px) / 3);
@@ -33,11 +34,16 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
 
 .card-content {
     background-color: var(--dark-blue);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .card-title {
     color: var(--pale-blue);
     font-size: 18px;
+    font-weight: 400;
 }
 
 .card-hour {

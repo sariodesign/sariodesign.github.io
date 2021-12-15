@@ -1,5 +1,9 @@
-.user {
+.section-user {
     background-color: var(--blue);
+    border-radius: 12px;
+}
+
+.user {
     border-radius: 12px;
     display: flex;
     gap: 16px;

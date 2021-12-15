@@ -1,7 +1,9 @@
 .tab-list {
+    align-items: center;
     background-color: var(--dark-blue);
     border-radius: 0 0 12px 12px;
     display: flex;
+    height: 70px;
     justify-content: space-between;
     padding: 0 30px;
 
@@ -13,6 +15,10 @@
 .tab-item {
     cursor: pointer;
     margin-bottom: 8px;
+
+    @media (min-width: 1440px) {
+        margin: 0;
+    }
 }
 
 .tab-item {

@@ -151,7 +151,8 @@ body {
   background-color: var(--dark-blue);
   border-radius: 0 0 12px 12px;
   display: flex;
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 @media (min-width: 1440px) {
   .tab-list {

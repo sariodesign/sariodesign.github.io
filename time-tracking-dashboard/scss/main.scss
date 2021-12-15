@@ -14,12 +14,17 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
 
+  body {
+    margin: 0;
+  }
+
   .wrapper {
     display: flex;
     column-gap: 15px;
     flex-direction: column;
     margin: 0 auto;
     max-width: 1024px;
+    padding: 0 8px;
 
     @media (min-width: 1440px) {
       flex-direction: row;

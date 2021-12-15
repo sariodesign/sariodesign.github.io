@@ -5,25 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
   <div class="wrapper">
     <div class="section-user">
       <div class="user">
-        Report for Jeremy Robson
+        <div class="user-avatar">
+          <img src="images/image-jeremy.png" alt="Avatar image"/>
+        </div>
+        <div class="user-name">
+          <span>Report for</span>
+          <h2>Jeremy Robson</h2>
+        </div>
       </div>
 
       <div class="tab-list">
-        <div class="tab-item" data-time-ref="daily">Daily</div>
+        <div class="tab-item" data-time-ref="daily">
+          Daily
+        </div>
         <div class="tab-item" data-time-ref="weekly">
           Weekly
         </div>
@@ -34,35 +38,59 @@
     </div>
 
     <div class="section-card">
-      <div class="card">
-        <div class="card-title">Work</div>
-        <div class="card-current-hour"></div>
-        <div class="card-previous-hour"></div>
+      <div class="card card--work">
+        <div class="card-content">
+          <h3 class="card-title">Work</h3>
+          <div class="card-hour">
+            <div class="card-current-hour"></div>
+            <div class="card-previous-hour"></div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title">Play</div>
-        <div class="card-current-hour"></div>
-        <div class="card-previous-hour"></div>
+      <div class="card card--play">
+        <div class="card-content">
+          <h3 class="card-title">Play</h3>
+          <div class="card-hour">
+            <div class="card-current-hour"></div>
+            <div class="card-previous-hour"></div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title">Study</div>
-        <div class="card-current-hour"></div>
-        <div class="card-previous-hour"></div>
+      <div class="card card--study">
+        <div class="card-content">
+          <h3 class="card-title">Study</h3>
+          <div class="card-hour">
+            <div class="card-current-hour"></div>
+            <div class="card-previous-hour"></div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title">Exercise</div>
-        <div class="card-current-hour"></div>
-        <div class="card-previous-hour"></div>
+      <div class="card card--exercise">
+        <div class="card-content">
+          <h3 class="card-title">Exercise</h3>
+          <div class="card-hour">
+            <div class="card-current-hour"></div>
+            <div class="card-previous-hour"></div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title">Social</div>
-        <div class="card-current-hour"></div>
-        <div class="card-previous-hour"></div>
+      <div class="card card--social">
+        <div class="card-content">
+          <h3 class="card-title">Social</h3>
+          <div class="card-hour">
+            <div class="card-current-hour"></div>
+            <div class="card-previous-hour"></div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <div class="card-title">Self Care</div>
-        <div class="card-current-hour"></div>
-        <div class="card-previous-hour"></div>
+      <div class="card card--self-care">
+        <div class="card-content">
+          <h3 class="card-title">Self Care</h3>
+          <div class="card-hour">
+            <div class="card-current-hour"></div>
+            <div class="card-previous-hour"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

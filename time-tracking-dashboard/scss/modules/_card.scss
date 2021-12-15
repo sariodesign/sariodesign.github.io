@@ -1,0 +1,55 @@
+$cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
+
+%card-bg {
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+}
+
+@each $card in $cards {
+  .card--#{$card} {
+      background-color: var(--color-#{$card});
+      @extend %card-bg;
+  }
+}
+
+.section-card {
+    display: flex;
+    gap: 15px;
+  }
+  
+  @media (min-width: 1024px) {
+    .section-card {
+      flex-wrap: wrap;
+    }
+  }
+  
+.card {
+    font-family: 'Rubik', sans-serif;
+
+    @media (min-width: 1024px) {
+        width: calc((100% - 30px) / 3);
+    }
+}
+
+.card-content {
+    background-color: var(--dark-blue);
+}
+
+.card-title {
+    color: var(--pale-blue);
+    font-size: 18px;
+}
+
+.card-hour {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-current-hour {
+    color: var(--pale-blue);
+}
+
+.card-previous-hour {
+    color: var(--desaturated-blue);  
+}

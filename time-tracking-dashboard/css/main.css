@@ -93,11 +93,12 @@ body {
 .section-card {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 24px;
 }
 @media (min-width: 1440px) {
   .section-card {
     flex-wrap: wrap;
+    gap: 15px;
   }
 }
 

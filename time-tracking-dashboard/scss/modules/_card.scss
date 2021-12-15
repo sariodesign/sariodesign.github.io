@@ -15,10 +15,11 @@ $cards: 'work', 'play', 'study', 'exercise', 'social', 'self-care';
 .section-card {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 24px;
 
     @media (min-width: 1440px) {
         flex-wrap: wrap;
+        gap: 15px;
     }
 }
   

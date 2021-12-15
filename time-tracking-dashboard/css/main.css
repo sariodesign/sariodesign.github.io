@@ -72,6 +72,7 @@
 
 .card {
   font-family: "Rubik", sans-serif;
+  min-height: 110px;
   position: relative;
 }
 @media (min-width: 1440px) {
@@ -83,6 +84,8 @@
 .card-content {
   background-color: var(--dark-blue);
   left: 0;
+  height: 90px;
+  padding: 20px;
   position: absolute;
   top: 0;
   width: 100%;

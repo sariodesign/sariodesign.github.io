@@ -33,6 +33,18 @@ body {
 
 .user {
   background-color: var(--blue);
+  display: flex;
+  padding: 20px;
+}
+
+.user-avatar {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 88px;
+  width: 88px;
+}
+.user-avatar img {
+  max-width: 100%;
 }
 
 .card--self-care, .card--social, .card--exercise, .card--study, .card--play, .card--work {

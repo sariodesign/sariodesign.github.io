@@ -47,6 +47,10 @@ body {
   max-width: 100%;
 }
 
+.user-name h2 {
+  margin: 0;
+}
+
 .card--self-care, .card--social, .card--exercise, .card--study, .card--play, .card--work {
   background-position: 0 100%;
   background-repeat: no-repeat;

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap");
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --color-work: hsl(15, 100%, 70%);
+  --color-play: hsl(195, 74%, 62%);
+  --color-study: hsl(348, 100%, 68%);
+  --color-exercise: hsl(145, 58%, 55%);
+  --color-social: hsl(264, 64%, 52%);
+  --color-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  background-color: var(--very-dark-blue);
+  display: flex;
+  column-gap: 15px;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 8px;
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}
+
+.section-user {
+  background-color: var(--blue);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.user {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+}
+
+.user-avatar {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 68px;
+  width: 68px;
+}
+.user-avatar img {
+  max-width: 100%;
+}
+
+.user-name h2 {
+  margin: 0;
+}
+
+.card--self-care, .card--social, .card--exercise, .card--study, .card--play, .card--work {
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+}
+
+.card--work {
+  background-color: var(--color-work);
+}
+
+.card--play {
+  background-color: var(--color-play);
+}
+
+.card--study {
+  background-color: var(--color-study);
+}
+
+.card--exercise {
+  background-color: var(--color-exercise);
+}
+
+.card--social {
+  background-color: var(--color-social);
+}
+
+.card--self-care {
+  background-color: var(--color-self-care);
+}
+
+.section-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 1440px) {
+  .section-card {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+.card {
+  border-radius: 12px;
+  min-height: 150px;
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .card {
+    width: calc((100% - 30px) / 3);
+  }
+}
+
+.card-content {
+  background-color: var(--dark-blue);
+  border-radius: 12px;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  height: 122px;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}
+
+.card-title {
+  color: var(--pale-blue);
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 16px;
+}
+
+.card-hour {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-current-hour {
+  color: var(--pale-blue);
+  font-size: 24px;
+  font-weight: 300;
+}
+.card-current-hour:after {
+  content: "hrs";
+}
+
+.card-previous-hour {
+  color: var(--desaturated-blue);
+}
+.card-previous-hour:before {
+  content: "Last weeks - ";
+}
+.card-previous-hour:after {
+  content: "hrs";
+}
+
+.tab-list {
+  align-items: center;
+  background-color: var(--dark-blue);
+  border-radius: 0 0 12px 12px;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+@media (min-width: 1440px) {
+  .tab-list {
+    flex-direction: column;
+  }
+}
+
+.tab-item {
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+@media (min-width: 1440px) {
+  .tab-item {
+    margin: 0;
+  }
+}
+
+.tab-item.active {
+  color: var(--pale-blue);
+}

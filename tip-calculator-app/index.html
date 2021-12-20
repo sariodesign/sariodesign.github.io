@@ -8,38 +8,46 @@
   
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
   <div class="tip-calculator">
     <div class="bill-container">
       <label class="label">Bill<span id="errorBill" class="label-error-msg"></span></label>
-      <input id="bill" type="number" /> 
+      <input id="bill" placeholder="Insert value bill" type="number" /> 
 
       <div class="tip">
         <label class="label">Select Tip %<span id="errorTip" class="label-error-msg"></span></label>
-        <input class="tip-value" name="tip" type="radio" value="5">
-        <span>5%</span>
-        <input class="tip-value" name="tip" type="radio" value="10">
-        <span>10%</span>
-        <input class="tip-value" name="tip" type="radio" value="15">
-        <span>15%</span>
-        <input class="tip-value" name="tip" type="radio" value="25">
-        <span>25%</span>
-        <input class="tip-value" name="tip" type="radio" value="50">
-        <span>50%</span>
-        <div class="tip-value-custom">
-          <input placeholder="Custom" class="" type="number"/>
+        <div class="tip-list">
+          <div class="tip-item">
+            <input class="tip-value" name="tip" id="value1" type="radio" value="5" disabled>
+            <label for="value1">5%</label>
+          </div>
+          <div class="tip-item">
+            <input class="tip-value" name="tip" id="value2" type="radio" value="10" disabled>
+            <label for="value2">10%</label>
+          </div>
+          <div class="tip-item">
+            <input class="tip-value" name="tip" id="value3" type="radio" value="15" disabled>
+            <label for="value3">15%</label>
+          </div>
+          <div class="tip-item">
+            <input class="tip-value" name="tip" id="value4" type="radio" value="25" disabled>
+            <label for="value4">25%</label>
+          </div>
+          <div class="tip-item">
+            <input class="tip-value" name="tip" id="value5" type="radio" value="50" disabled>
+            <label for="value5">50%</label>
+          </div>
+          <div class="tip-item">
+            <input placeholder="Custom" class="tip-value tip-value-custom" type="number" disabled />
+          </div>
         </div>
       </div>
 
       <label class="label">Number of People<span id="errorPeople" class="label-error-msg"></span></label>
-      <input id="people" />
+      <input id="people" placeholde="Insert number of people" type="number" disabled />
 
     </div>
     <div class="result-container">
@@ -54,7 +62,7 @@
         <span id="totalForPeople"></span>
       </div>
 
-      <div id="reset" class="">Reset</div>
+      <input id="reset" type="button" class="" value="Reset" disabled/>
     </div>
   </div>
   

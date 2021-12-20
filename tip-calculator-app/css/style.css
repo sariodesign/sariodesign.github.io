@@ -1,10 +1,130 @@
-/* Colors */
+/* Variables */
 :root {
   --strong-cyan: hsl(172, 67%, 45%);
   --very-dark-grayish-cyan: hsl(183, 100%, 15%);
   --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --dark-grayish-cyan2: hsl(184, 14%, 56%);
   --light-grayish-cyan: hsl(185, 41%, 84%);
-  --light-grayish-cyan: hsl(189, 41%, 97%);
+  --light-grayish-cyan2: hsl(189, 41%, 97%);
   --white: hsl(0, 0%, 100%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;1,700&display=swap');
+
+body {
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+}
+
+.label {
+  color: var(--dark-grayish-cyan);
+  display: block;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.label--inverse {
+  color: var(--light-grayish-cyan2);
+}
+
+.tip-calculator {
+  background-color: var(--white);
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 32px;
+}
+
+@media (min-width: 1440px) {
+  .tip-calculator {
+    display: flex;
+    gap: 36px;
+    padding: 40px 36px;
+  }
+}
+
+.tip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.bill-container,
+.result-container {
+  width: 50%;
+}
+
+.result-container {
+  background-color: var(--very-dark-grayish-cyan);
+  border-radius: 16px;
+  padding: 44px 24px;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--light-grayish-cyan2);
+  border: 0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  height: 48px;
+  outline: none;
+  padding: 0 12px;
+  text-align: right;
+  width: 100%;
+}
+
+input[type="number"]:focus {
+  box-shadow: inset 0 0 0 2px var(--very-dark-grayish-cyan);
+}
+
+.tip-value {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.tip-value[disabled] + label {
+  cursor: not-allowed;
+  opacity: .5;
+}
+
+.tip-value.selected + label {
+  background-color: var(--strong-cyan);
+  color: var(--light-grayish-cyan2);
+}
+
+.tip-item {
+  position: relative;
+  width: calc(50% - 8px);
+}
+
+.tip-item label {
+  background-color: var(--very-dark-grayish-cyan);
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.tip-amount span,
+.total-amount span {
+  color: var(--strong-cyan);
 }

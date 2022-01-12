@@ -11,11 +11,15 @@
   <link href="css/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
+  <h1 class="title">Splitter</h1>
   <div class="tip-calculator">
     <div class="bill-container">
-      <label class="label">Bill<span id="errorBill" class="label-error-msg"></span></label>
-      <input id="bill" placeholder="Insert value bill" type="number" /> 
+      
+      <div class="bill">
+        <label class="label">Bill<span id="errorBill" class="label-error-msg"></span></label>
+        <input class="bill-input" id="bill" placeholder="Insert value of bill" type="number" value="0" /> 
+      </div>
+        
 
       <div class="tip">
         <label class="label">Select Tip %<span id="errorTip" class="label-error-msg"></span></label>
@@ -46,23 +50,25 @@
         </div>
       </div>
 
-      <label class="label">Number of People<span id="errorPeople" class="label-error-msg"></span></label>
-      <input id="people" placeholde="Insert number of people" type="number" disabled />
+      <div class="person">
+        <label class="label">Number of person<span id="errorperson" class="label-error-msg"></span></label>
+        <input class="person-input" id="person" placeholde="Insert number of person" type="number" value="0" disabled />
+      </div>
 
     </div>
     <div class="result-container">
 
       <div class="tip-amount">
         <label class="label label--inverse">Tip Amount</label>
-        <span id="totalTipForPeople"></span>
+        <span id="totalTipForPerson">0.00</span>
       </div>
 
       <div class="total-amount">
         <label class="label label--inverse">Total</label>
-        <span id="totalForPeople"></span>
+        <span id="totalForPerson">0.00</span>
       </div>
 
-      <input id="reset" type="button" class="" value="Reset" disabled/>
+      <input id="reset" type="button" class="input-reset" value="Reset" disabled/>
     </div>
   </div>
   

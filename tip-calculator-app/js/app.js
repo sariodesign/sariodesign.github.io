@@ -23,7 +23,7 @@ bill.addEventListener('change', (e) => {
     tipValues.forEach( tip => {
       tip.disabled = true;
     });
-    console.log('Not a valid valueß');
+    console.log('Not a valid value');
     errorBill.textContent = errorBillMsg;
   }
 })

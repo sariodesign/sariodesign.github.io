@@ -1,0 +1,59 @@
+@import 'reset.css';
+
+body.is-locked {
+    overflow: hidden;
+}
+
+body.is-locked:after {
+    background-color: rgba(0,0,0,.85);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.trigger-menu {
+    background-image: url('../images/icon-hamburger.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-nav {
+    background-color: #fff;
+    border-radius: 6px;
+    margin: 0 auto;
+    opacity: 0;
+    position: fixed;
+    visibility: hidden;
+    top: 32px;
+    z-index: 3;
+    width: calc(100% - 32px);
+}
+
+.site-nav.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.site-nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.site-nav-link {
+    color: #000;
+    text-decoration: none;
+}

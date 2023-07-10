@@ -84,8 +84,8 @@ body {
 
 .tip-calculator {
   background-color: var(--white);
-  border-radius: 24px 24px 0 0;
-  margin: 0 auto;
+  border-radius: 24px;
+  margin: 0 auto 32px;
   max-width: 700px;
   padding: 32px;
 }
@@ -94,6 +94,7 @@ body {
   .tip-calculator {
     display: flex;
     gap: 36px;
+    margin-bottom: 0;
     padding: 40px 36px;
   }
 }
@@ -209,6 +210,7 @@ input[type="number"]:focus {
   content: '/ person';
   display: block;
   font-size: 12px;
+  padding-top: 4px;
 }
 
 .tip-amount span,
@@ -234,4 +236,22 @@ input[type="number"]:focus {
   font-weight: 700;
   text-transform: uppercase;
   width: 100%;
+}
+
+.attribution {
+  padding-bottom: 32px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .attribution {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+  }
+}
+
+.attribution a {
+  color: #333;
 }

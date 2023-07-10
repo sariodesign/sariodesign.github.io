@@ -7,13 +7,13 @@
 
 	let darkImage = {
 		classes: 'about-image',
-		srcUrl: '../static/img/image-about-dark.jpg',
+		srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/image-about-dark.jpg',
 		altName: 'About dark image'
 	};
 
 	let lightImage = {
 		classes: 'about-image',
-		srcUrl: '../static/img/image-about-light.jpg',
+		srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/image-about-light.jpg',
 		altName: 'About light image'
 	}
 

@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github repository](https://github.com/sariodesign/sariodesign.github.io/room-homepage)
-- Live Site URL: [vercel live app](https://sariodesign.github.io/room-homepage/app/public/)
+- Live Site URL: [gihutb live app](https://sariodesign.github.io/room-homepage/app/public/)
 
 ## My process
 

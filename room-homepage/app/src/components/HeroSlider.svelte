@@ -11,7 +11,7 @@
                 }
             ],
             srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/mobile-image-hero-1.jpg',
-            alt: 'Image 1',
+            altName: 'Slide 1',
         },
         {
             classes: 'slide',
@@ -22,7 +22,7 @@
                 }
             ],
             srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/mobile-image-hero-2.jpg',
-            alt: 'Image 2',
+            altName: 'Slide 2',
         },
         {
             classes: 'slide',
@@ -33,7 +33,7 @@
                 }
             ],
             srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/mobile-image-hero-3.jpg',
-            alt: 'Image 3',
+            altName: 'Slide 3',
         }
     ];
 
@@ -92,7 +92,7 @@
 
 </script>
 
-<div class="hero">
+<div class="hero" role="hero">
     <div class="hero-slider">
         {#each slides as slide}
             <Image {...slide} />
@@ -100,10 +100,10 @@
     </div>
 </div>
 <div class="hero-arrows">
-    <button id="arrowPrev" class="arrow-btn is-disable" data-direction="prev" on:click={moveSlider}>
+    <button id="arrowPrev" class="arrow-btn is-disable" data-direction="prev" on:click={moveSlider} aria-label="prev slide">
         <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
     </button>
-    <button id="arrowNext" class="arrow-btn" data-direction="next" on:click={moveSlider}>
+    <button id="arrowNext" class="arrow-btn" data-direction="next" on:click={moveSlider} aria-label="next slide">
         <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
     </button>
 </div>
@@ -159,10 +159,10 @@
 
         @media (min-width: 1440px) {
             cursor: pointer;
-        }
 
-        &:hover {
-            opacity: .75;
+            &:hover {
+                opacity: .75;
+            }
         }
 
         &:global(.is-disable) {

@@ -19,20 +19,22 @@
 
 </script>
 
-<nav>
-    <button class="btn-menu btn-open" data-action="open" on:click={showHideMenu}></button>
-    <div class="logo">room</div>
-    <div class="menu-container">
-        <button class="btn-menu btn-close" data-action="close" on:click={showHideMenu}></button>
-        <ul class="menu">
-            {#each menuItems as item}
-		        <li>
-                    <a href="/">{item}</a>
-                </li>
-	        {/each}
-        </ul>
-    </div>
-</nav>
+<header>
+    <nav>
+        <button class="btn-menu btn-open" data-action="open" on:click={showHideMenu} aria-label="open menu"></button>
+        <div class="logo">room</div>
+        <div class="menu-container">
+            <button class="btn-menu btn-close" data-action="close" on:click={showHideMenu} aria-label="close menu"></button>
+            <ul class="menu">
+                {#each menuItems as item}
+                    <li>
+                        <a href="/">{item}</a>
+                    </li>
+                {/each}
+            </ul>
+        </div>
+    </nav>
+</header>
 
 <style lang="scss">
     .btn-menu {

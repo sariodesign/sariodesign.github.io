@@ -2,11 +2,11 @@
   export let classes;
 </script>
 
-<div class={classes}>
+<article class={classes}>
   <slot name="title"></slot>
   <slot name="text"></slot>
   <slot name="link"></slot>
-</div>
+</article>
 
 <style lang="scss">
   .content {

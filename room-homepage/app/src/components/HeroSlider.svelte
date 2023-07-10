@@ -109,8 +109,20 @@
 </div>
 
 <style lang="scss">
+
+    .hero-container {
+        @media (min-width: 1440px){
+            grid-column: 1 / 3;
+        }
+    }
+
     .hero {
         overflow: hidden;
+
+        @media (min-width: 1440px){
+            grid-column: 1 / 3;
+            height: 100%;
+        }
     }
 
     .hero-slider {
@@ -129,6 +141,7 @@
 
         :global(img) {
             vertical-align: bottom;
+            width: 100%;
         }
     }
     .hero-arrows {
@@ -136,16 +149,34 @@
         display: flex;
         position: absolute;
         right: 0;
+
+        @media (min-width: 1440px) {
+            right: -160px
+        }
     }
     .arrow-btn {
         border: 0;
+        border-radius: 0;
         background-color: #000;
         height: 80px;
         margin: 0;
+        transition: all .25s ease-in-out;
         width: 80px;
+
+        @media (min-width: 1440px) {
+            cursor: pointer;
+        }
+
+        &:hover {
+            opacity: .75;
+        }
 
         &:global(.is-disable) {
             opacity: .5;
+
+            @media (min-width: 1440px) {
+                cursor: not-allowed;
+            }
         }
 
         svg {

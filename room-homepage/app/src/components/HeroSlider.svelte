@@ -6,33 +6,33 @@
             classes: 'slide current',
             srcsetList: [
                 {
-                    src: '../static/img/desktop-image-hero-1.jpg',
+                    src: 'https://sariodesign.github.io/room-homepage/app/public/static/img/desktop-image-hero-1.jpg',
                     media: '(min-width: 1400px)'
                 }
             ],
-            srcUrl: '../static/img/mobile-image-hero-1.jpg',
+            srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/mobile-image-hero-1.jpg',
             alt: 'Image 1',
         },
         {
             classes: 'slide',
             srcsetList: [
                 {
-                    src: '../static/img/desktop-image-hero-2.jpg',
+                    src: 'https://sariodesign.github.io/room-homepage/app/public/static/img/desktop-image-hero-2.jpg',
                     media: '(min-width: 1400px)'
                 }
             ],
-            srcUrl: '../static/img/mobile-image-hero-2.jpg',
+            srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/mobile-image-hero-2.jpg',
             alt: 'Image 2',
         },
         {
             classes: 'slide',
             srcsetList: [
                 {
-                    src: '../static/img/desktop-image-hero-3.jpg',
+                    src: 'https://sariodesign.github.io/room-homepage/app/public/static/img/desktop-image-hero-3.jpg',
                     media: '(min-width: 1400px)'
                 }
             ],
-            srcUrl: '../static/img/mobile-image-hero-3.jpg',
+            srcUrl: 'https://sariodesign.github.io/room-homepage/app/public/static/img/mobile-image-hero-3.jpg',
             alt: 'Image 3',
         }
     ];

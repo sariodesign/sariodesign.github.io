@@ -27,7 +27,7 @@
         <ul class="menu">
             {#each menuItems as item}
 		        <li>
-                    <a href="#">{item}</a>
+                    <a href="/">{item}</a>
                 </li>
 	        {/each}
         </ul>

@@ -83,10 +83,6 @@
 
 	:global(.about-image) {
 		margin: 0;
-
-		img {
-			max-width: 100%
-		}
 	}
 
 	:global(.is-locked) {

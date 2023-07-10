@@ -110,12 +110,6 @@
 
 <style lang="scss">
 
-    .hero-container {
-        @media (min-width: 1440px){
-            grid-column: 1 / 3;
-        }
-    }
-
     .hero {
         overflow: hidden;
 

@@ -38,13 +38,32 @@ body {
   margin: 0;
 }
 
+@media (min-width: 1440px) {
+  body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+}
+
 .title {
   font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 6px;
   margin: 0 auto;
-  max-width: 60px;
+  max-width: 90px;
   padding: 30px 0;
   text-transform: uppercase;
   word-break: break-word;
+}
+
+@media (min-width: 1440px) {
+  .title {
+    margin-bottom: 90px;
+    padding: 0;
+  }
 }
 
 .label {
@@ -68,6 +87,12 @@ body {
   margin-bottom: 24px;
 }
 
+@media (min-width: 1440px) {
+  .bill {
+    margin-bottom: 48px;
+  }
+}
+
 .bill-input {
   background-image: url(../images/icon-dollar.svg);
   background-position: 12px center;
@@ -82,6 +107,16 @@ body {
   font-size: 20px;
 }
 
+.tip {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1440px) {
+  .tip {
+    margin-bottom: 48px;
+  }
+}
+
 .tip-calculator {
   background-color: var(--white);
   border-radius: 24px;
@@ -93,9 +128,11 @@ body {
 @media (min-width: 1440px) {
   .tip-calculator {
     display: flex;
-    gap: 36px;
+    gap: 48px;
     margin-bottom: 0;
-    padding: 40px 36px;
+    padding: 48px;
+    max-width: none;
+    width: 920px;
   }
 }
 
@@ -103,18 +140,27 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 24px;
 }
 
 @media (min-width: 1440px) {
-  .bill-container,
+  .bill-container {
+    flex: 1;
+  }
+
   .result-container {
-    width: 50%;
+    box-sizing: border-box;
+    width: 412px;
   } 
 }
 
 .person {
   margin-bottom: 24px;
+}
+
+@media (min-width: 1440px) {
+  .person {
+    margin-bottom: 0;
+  }
 }
 
 .person-input {
@@ -131,6 +177,13 @@ body {
   background-color: var(--very-dark-grayish-cyan);
   border-radius: 16px;
   padding: 40px 24px 20px;
+}
+
+@media (min-width: 1440px) {
+  .result-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 input[type="number"] {
@@ -169,6 +222,10 @@ input[type="number"]:focus {
   font-weight: 700;
 }
 
+.tip-value-custom::placeholder {
+  text-align: center;
+}
+
 .tip-value.selected + label {
   background-color: var(--strong-cyan);
   color: var(--light-grayish-cyan2);
@@ -177,6 +234,12 @@ input[type="number"]:focus {
 .tip-item {
   position: relative;
   width: calc(50% - 8px);
+}
+
+@media (min-width: 1440px) {
+  .tip-item {
+    width: calc(33.33% - 14px)
+  }
 }
 
 .tip-item label {
@@ -201,12 +264,13 @@ input[type="number"]:focus {
 
 .tip-amount label,
 .total-amount label {
+  color: var(--light-grayish-cyan);
   margin-bottom: 0;
 }
 
 .tip-amount label:after,
 .total-amount label:after {
-  color: var(--light-grayish-cyan);
+  color: var(--dark-grayish-cyan2);
   content: '/ person';
   display: block;
   font-size: 12px;
@@ -236,6 +300,12 @@ input[type="number"]:focus {
   font-weight: 700;
   text-transform: uppercase;
   width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .input-reset {
+    margin-top: auto
+  }
 }
 
 .attribution {

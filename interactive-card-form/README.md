@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/sariodesign/sariodesign.github.io/tree/main/interactive-card-form)
-- Live Site URL: [Add live site URL here](https://sariodesign.github.io/interactive-card/)
+- Live Site URL: [Add live site URL here](https://sariodesign.github.io/interactive-card-form/)
 
 ## My process
 

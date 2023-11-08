@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+:root {
+  --very-dark-blue: #141519;
+  --dark-blue: #1F2630;
+  --light-gray: #959EAC;
+  --medium-grey: #7A8699;
+  --white: #ffffff;
+  --orange: #FB7413;
+  --body-font: 'Overpass', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  font-family: var(--body-font), Arial, Helvetica, sans-serif;
+  justify-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.icon {
+  align-items: center;
+  background-color: #262F38;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin-bottom: 24px;
+  width: 40px;
+}
+
+.card {
+  background-color: var(--dark-blue);
+  border-radius: 16px;
+  margin: 0 auto;
+  padding: 24px;
+  width: calc(100% - 48px);
+}
+
+.card-thank-you {
+  text-align: center;
+}
+
+.content {
+  margin-bottom: 24px;
+  transform-origin: center center;
+}
+
+.content h1 {
+  color: var(--white);
+  margin: 0 0 24px;
+}
+
+.content p {
+  color: var(--light-gray);
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0 0 32px;
+}
+
+.rating {
+  column-gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+.rating label {
+  align-items: center;
+  background-color: #262F38;
+  border-radius: 50%;
+  color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  line-height: 1;
+  width: 42px;
+}
+
+.rating label:has( > input:checked) {
+  background-color: var(--light-gray);
+  color: var(--white);
+}
+
+.rating label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+
+.rating input {
+  appearance: none;
+  margin: 0;
+}
+
+.rating button {
+  border: 0;
+  background-color: var(--orange);
+  border-radius: 24px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 16px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.rating button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.rating-message {
+  background-color: #262F38;
+  border-radius: 20px;
+  color: var(--orange);
+  margin-bottom: 32px;
+  padding: 12px;
+}
+
+.thank-you {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thank-you img {
+  margin: 0 auto 24px;
+}
+
+.thank-you {
+  margin-bottom: 0;
+}
+
+.thank-you p {
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 32px;
+    width: 412px;
+  }
+
+  .rating {
+    column-gap: 22px;
+    row-gap: 32px;
+  }
+
+  .rating label {
+    height: 52px;
+    width: 52px;
+  }
+}

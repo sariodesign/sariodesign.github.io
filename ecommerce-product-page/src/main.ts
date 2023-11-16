@@ -51,7 +51,7 @@ quantityHandlerBtn.forEach(button => {
 
 // Slider functions
 function checkSliderArrows() {
-  let currentIndexSlide = Array.from(slides).findIndex(slide => slide.dataset.visibility)
+  let currentIndexSlide = Array.from(slides).findIndex((slide: Element) => (slide as HTMLElement).dataset.visibility)
   if(currentIndexSlide === 0) {
     sliderHandlerBtn[0].classList.add('hidden')
   } else if (currentIndexSlide === slides.length - 1) {
@@ -64,7 +64,7 @@ function checkSliderArrows() {
 const sliderHandlerBtn = document.querySelectorAll('.arrows button')
 const slides = document.querySelectorAll('.slide')
 
-sliderHandlerBtn.forEach(btn => {
+/* sliderHandlerBtn.forEach(btn => {
   btn.addEventListener('click', () => {
     let currentSlide = Array.from(slides).findIndex(slide => slide.dataset.visibility)
     console.log(currentSlide)
@@ -80,7 +80,27 @@ sliderHandlerBtn.forEach(btn => {
 
     checkSliderArrows()
   })
+}) */
+
+sliderHandlerBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    let currentSlide = Array.from(slides).findIndex((slide: Element) => (slide as HTMLElement).dataset.visibility)
+    console.log(currentSlide)
+    if (btn instanceof HTMLElement && btn.dataset.action === 'next') {
+      (slides[currentSlide] as HTMLElement).removeAttribute('data-visibility');
+      (slides[currentSlide + 1] as HTMLElement).setAttribute('data-visibility', 'true');
+      (slides[currentSlide + 1] as HTMLElement).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    } else {
+      (slides[currentSlide] as HTMLElement).removeAttribute('data-visibility');
+      (slides[currentSlide - 1] as HTMLElement).setAttribute('data-visibility', 'true');
+      (slides[currentSlide - 1] as HTMLElement).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    }
+
+    checkSliderArrows()
+  })
 })
+
+
 
 // Cart functions
 const baseProduct = {

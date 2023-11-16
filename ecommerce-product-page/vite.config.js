@@ -1,3 +1,3 @@
 export default {
-  base: '/ecommerce-product-page/'
+  publicDir: '/ecommerce-product-page/'
 }

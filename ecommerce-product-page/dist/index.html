@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-end mentor challenge | Ecommerce product page</title>
+    <script type="module" crossorigin src="./assets/index-412d0ed5.js"></script>
+    <link rel="stylesheet" href="./assets/index-33d0565b.css">
+  </head>
+  <body>
+    <div>
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <img class="open-icon" src="./icon-menu.svg" alt="menu icon" />
+          <img src="./logo.svg" alt="logo">
+        </div>
+        <div class="header-right">
+          <button class="open-cart-btn">
+            <img src="./icon-cart.svg" alt="cart icon">
+          </button>
+          <img width="24" height="24" src="./image-avatar.png" alt="avatar" />
+        </div>
+      </header>
+
+      <!-- Main -->
+      <main>
+        <!-- Hero Slider -->
+        <section class="slider">
+          <div class="slider-list">
+            <figure class="slide" data-visibility="true">
+              <img src="./image-product-1.jpg" alt="Product image 1">
+            </figure>
+            <figure class="slide">
+              <img src="./image-product-2.jpg" alt="Product image 2">
+            </figure>
+            <figure class="slide">
+              <img src="./image-product-3.jpg" alt="Product image 3">
+            </figure>
+            <figure class="slide">
+              <img src="./image-product-4.jpg" alt="Product image 4">
+            </figure>
+          </div>
+          <div class="arrows">
+            <button class="prev-slide hidden" data-action="prev">
+              <img src="./icon-previous.svg" alt="icon prev">
+            </button>
+            <button class="next-slide" data-action="next">
+              <img src="./icon-next.svg" alt="icon next">
+            </button>
+          </div>
+        </section>
+
+        <!-- Product details -->
+        <section class="content">
+          
+          <!-- Text description about product -->
+          <article>
+            <span>Sneaker Company</span>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          </article>
+
+          <!-- Price details about product -->
+          <div class="price-details">
+            <div class="price-discount">
+              <span class="current-price">$125.00</span>
+              <span class="discount">50%</span>
+            </div>
+            <div class="previous-price">$250.00</div>
+          </div>
+
+          <!-- Cart controller -->
+          <div class="cart-controller">
+            <div class="cart-quantity-controller">
+              <button class="cart-quantity-btn" data-action="decrement">
+                <img src="./icon-minus.svg" alt="icon minus">
+              </button>
+              <div id="quantity"></div>
+              <button class="cart-quantity-btn" data-action="increment">
+                <img src="./icon-plus.svg" alt="icon plus">
+              </button>
+            </div>
+            <button class="cart-add-btn">
+              <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"/></svg>
+              <span>Add to cart</span>
+            </button>
+          </div>
+        </section>
+
+        <dialog class="cart-dialog">
+          <header>Cart</header>
+          <div class="cart-dialog-content" id="dialog-content">
+            <p>Your cart is empty.</p>
+          </div>
+        </dialog>
+
+        <dialog class="menu-mobile">
+          <nav class="menu-navigation">
+            <button class="close-icon">
+              <img src="./icon-close.svg" alt="icon close" />
+            </button>
+            <a href="#">Collections</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </nav>
+        </dialog>
+      </main>
+
+    </div>
+    
+  </body>
+</html>

@@ -1,4 +1,4 @@
 export default {
   //publicDir: '/ecommerce-product-page/public',
-	base: ''
+	base: '/ecommerce-product-page/'
 }

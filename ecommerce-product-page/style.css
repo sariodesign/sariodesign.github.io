@@ -59,6 +59,10 @@ button {
 	column-gap: 20px;
 }
 
+.header-menu {
+	display: none;
+}
+
 /* ========== Style of slider ========== */
 
 .slider {
@@ -89,6 +93,7 @@ button {
 	background-color: var(--white);
 	border: 0;
 	border-radius: 50%;
+	cursor: pointer;
 	height: 40px;
 	width: 40px;
 }
@@ -98,6 +103,10 @@ button {
 }
 
 .arrows button.hidden {
+	display: none;
+}
+
+.thumbs {
 	display: none;
 }
 
@@ -171,6 +180,7 @@ button {
 }
 
 .cart-controller .cart-quantity-btn {
+	cursor: pointer;
 	margin: 0;
 	padding: 0;
 }
@@ -195,6 +205,7 @@ button {
 	border-radius: 8px;
 	color: var(--white);
 	column-gap: 14px;
+	cursor: pointer;
 	display: flex;
 	font-size: 14px;
 	line-height: 1;
@@ -294,6 +305,93 @@ button {
 
 .close-icon {
 	margin-bottom: 26px;
+}
+
+@media screen and (min-width: 1024px) {
+	.header {
+		border-bottom: 1px solid var(--grayish-blue);
+		margin-bottom: 90px;
+		padding-bottom: 48px;
+	}
+
+	.header-menu {
+		column-gap: 34px;
+		display: flex;
+	}
+
+	.header-menu a {
+		color: var(--dark-grayish-blue);
+		text-decoration: none;
+	}
+
+	.open-icon {
+		display: none;
+	}
+	
+	main {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		max-width: 1024px;
+		margin: 0 auto
+	}
+
+	.slider,
+	.content {
+		width: 450px;
+	}
+
+	.slider-list {
+		border-radius: 12px;
+		margin-bottom: 30px;
+		overflow: hidden;
+	}
+
+	.cart-controller { 
+		column-gap: 16px;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+
+	.cart-quantity-controller {
+		flex: none;
+		width: 156px;
+	}
+
+	.cart-add-btn {
+		box-shadow: 0 25px 25px -25px var(--orange);
+		flex: 1 0 auto;
+		min-width: unset;
+	}
+
+	.slider .arrows {
+		display: none;
+	}
+
+	.thumbs {
+		column-gap: 30px;
+		display: flex;
+	}
+
+	.thumbs figure {
+		border-radius: 8px;
+		cursor: pointer;
+		height: 90px;
+		overflow: hidden;
+		width: 90px;
+	}
+
+	.thumbs figure:hover {
+		opacity: .5;
+	}
+
+	.thumbs figure.active {
+		box-shadow: 0 0 0 2px var(--orange);
+	}
+
+	.thumbs figure.active img {
+		opacity: .5;
+	}
 }
 
 @keyframes slideIn {

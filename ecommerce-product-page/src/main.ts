@@ -64,28 +64,10 @@ function checkSliderArrows() {
 const sliderHandlerBtn = document.querySelectorAll('.arrows button')
 const slides = document.querySelectorAll('.slide')
 
-/* sliderHandlerBtn.forEach(btn => {
-  btn.addEventListener('click', () => {
-    let currentSlide = Array.from(slides).findIndex(slide => slide.dataset.visibility)
-    console.log(currentSlide)
-    if(btn.dataset.action === 'next') {
-      slides[currentSlide].removeAttribute('data-visibility');
-      slides[currentSlide + 1].setAttribute('data-visibility', 'true')
-      slides[currentSlide + 1].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
-    } else {
-      slides[currentSlide].removeAttribute('data-visibility');
-      slides[currentSlide - 1].setAttribute('data-visibility', 'true')
-      slides[currentSlide - 1].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
-    }
-
-    checkSliderArrows()
-  })
-}) */
-
 sliderHandlerBtn.forEach(btn => {
   btn.addEventListener('click', () => {
     let currentSlide = Array.from(slides).findIndex((slide: Element) => (slide as HTMLElement).dataset.visibility)
-    console.log(currentSlide)
+    console.log('current slide: ', currentSlide)
     if (btn instanceof HTMLElement && btn.dataset.action === 'next') {
       (slides[currentSlide] as HTMLElement).removeAttribute('data-visibility');
       (slides[currentSlide + 1] as HTMLElement).setAttribute('data-visibility', 'true');
@@ -97,6 +79,20 @@ sliderHandlerBtn.forEach(btn => {
     }
 
     checkSliderArrows()
+  })
+})
+
+// Thumbs function
+const thumbImages = document.querySelectorAll('.thumbs figure');
+
+thumbImages.forEach((thumb, index) => {
+  thumb.addEventListener('click', () => {
+    thumbImages.forEach(thumb => thumb.classList.remove('active'))
+    if(!thumb.classList.contains('active')){
+      thumb.classList.add('active')
+    }
+    slides[index].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+    console.log(index)
   })
 })
 

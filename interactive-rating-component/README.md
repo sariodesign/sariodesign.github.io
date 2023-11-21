@@ -1,27 +1,62 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Interactive rating component solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The challenge
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+Users should be able to:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Select and submit a number rating
+- See the "Thank you" card state after submitting a rating
+
+### Screenshot
+
+![](./screenshot.png)
+
+### Links
+
+- Solution URL: [Github repository](https://github.com/sariodesign/sariodesign.github.io/tree/main/interactive-rating-component)
+- Live Site URL: [Vercel live app](https://interactive-rating-component-puce-zeta.vercel.app/)
+
+## My process
+
+### Built with
+
+- Flexbox
+- CSS Variables
+- Mobile-first workflow
+- [React](https://react.dev)
+- [Framer Motion](https://www.framer.com/motion/)
+
+### What I learned
+
+I improved the knowledges about React and a Framer Motion
+
+### Continued development
+
+Add some animations
+
+## Author
+
+- Website - [SarioDesign](https://www.sariodesign.dev)
+- Frontend Mentor - [@sariodesign](https://www.frontendmentor.io/profile/sariodesign)
+- Twitter - [@sariodesign](https://www.twitter.com/sariodesign)
+- Linkedin - [@sariodesign](https://www.linkedin.com/in/sariodesign/)
+- Github - [@sariodesign](https://github.com/sariodesign)

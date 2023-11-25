@@ -1,7 +1,13 @@
+// =========== Import ==========
+import addToCart from "./cart"
+import { sliderInit, slideByThumb } from "./slider"
+
 // Menu items link
 const menuMobile:HTMLDialogElement | null = document.querySelector('.menu-mobile')
 const openMenuMobileBtn = document.querySelector('.open-icon')
 const closeMenuMobileBtn = document.querySelector('.close-icon')
+const desktopMatchMedia = window.matchMedia("(min-width: 1024px)");
+
 openMenuMobileBtn?.addEventListener('click', () => {
   menuMobile!.showModal()
 })
@@ -49,56 +55,7 @@ quantityHandlerBtn.forEach(button => {
 })
 
 
-// Slider functions
-function checkSliderArrows() {
-  let currentIndexSlide = Array.from(slides).findIndex((slide: Element) => (slide as HTMLElement).dataset.visibility)
-  if(currentIndexSlide === 0) {
-    sliderHandlerBtn[0].classList.add('hidden')
-  } else if (currentIndexSlide === slides.length - 1) {
-    sliderHandlerBtn[1].classList.add('hidden')
-  } else {
-    sliderHandlerBtn.forEach(btn => btn.classList.remove('hidden'))
-  }
-}
-
-const sliderHandlerBtn = document.querySelectorAll('.arrows button')
-const slides = document.querySelectorAll('.slide')
-
-sliderHandlerBtn.forEach(btn => {
-  btn.addEventListener('click', () => {
-    let currentSlide = Array.from(slides).findIndex((slide: Element) => (slide as HTMLElement).dataset.visibility)
-    console.log('current slide: ', currentSlide)
-    if (btn instanceof HTMLElement && btn.dataset.action === 'next') {
-      (slides[currentSlide] as HTMLElement).removeAttribute('data-visibility');
-      (slides[currentSlide + 1] as HTMLElement).setAttribute('data-visibility', 'true');
-      (slides[currentSlide + 1] as HTMLElement).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
-    } else {
-      (slides[currentSlide] as HTMLElement).removeAttribute('data-visibility');
-      (slides[currentSlide - 1] as HTMLElement).setAttribute('data-visibility', 'true');
-      (slides[currentSlide - 1] as HTMLElement).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
-    }
-
-    checkSliderArrows()
-  })
-})
-
-// Thumbs function
-const thumbImages = document.querySelectorAll('.thumbs figure');
-
-thumbImages.forEach((thumb, index) => {
-  thumb.addEventListener('click', () => {
-    thumbImages.forEach(thumb => thumb.classList.remove('active'))
-    if(!thumb.classList.contains('active')){
-      thumb.classList.add('active')
-    }
-    slides[index].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
-    console.log(index)
-  })
-})
-
-
-
-// Cart functions
+// ==================== Cart functions ====================
 const baseProduct = {
   title: 'Fall Limited Edition Sneakers',
   thumb: 'image-product-1-thumbnail.jpg',
@@ -109,39 +66,6 @@ const openCartBtn = document.querySelector('.open-cart-btn')
 const addCartBtn = document.querySelector('.cart-add-btn')
 const cartDialog:HTMLDialogElement | null = document.querySelector('.cart-dialog')
 const cartContent = document.querySelector('#dialog-content')
-
-function addToCart(quantity:number) {
-  // Create empty elements and add attributes
-  const productContainer = document.createElement('div')
-  productContainer.classList.add('cart-product')
-  const productTextContent = document.createElement('div')
-  const productTitle = document.createElement('h3')
-  const productThumb = document.createElement('img')
-  const productPrice = document.createElement('div')
-  const productDelete = document.createElement('button')
-
-  productThumb.setAttribute('src', baseProduct.thumb)
-  productContainer.appendChild(productThumb)
-
-  productTextContent.classList.add('cart-product-text')
-  
-  productTitle.textContent = baseProduct.title
-  productTextContent.appendChild(productTitle)
-
-  // Calculate price
-  const basePrice = baseProduct.price
-  const totalPrice = basePrice * quantity
-  quantity > 1 ? productPrice.innerHTML = `$${basePrice.toFixed(2).toString()} x ${quantity.toString()} <strong>$${totalPrice.toFixed(2).toString()}</strong>` : productPrice.textContent = `$${basePrice.toFixed(2).toString()}`
-  productTextContent.appendChild(productPrice)
-  productContainer.appendChild(productTextContent)
-
-  // Button for delete product
-  productDelete.classList.add('cart-product-remove')
-  productContainer.appendChild(productDelete)
-
-  cartContent!.innerHTML = '';
-  cartContent?.appendChild(productContainer)
-}
 
 cartDialog?.addEventListener('click', (e) => {
   if (!(e.target instanceof HTMLElement)) return;
@@ -161,13 +85,48 @@ openCartBtn?.addEventListener('click', () => {
   if(cartDialog?.hasAttribute('open')) {
     cartDialog.close();
   } else {
-    cartDialog?.showModal();
+    cartDialog?.show();
   }
 })
 
 addCartBtn?.addEventListener('click', () => {
   if(Number(QUANTITY_DISPLAY!.textContent) > 0) {
-    addToCart(Number(QUANTITY_DISPLAY!.textContent))
+    addToCart(Number(QUANTITY_DISPLAY!.textContent), baseProduct, cartContent)
     console.log('add to cart')
   }
 })
+
+
+// ==================== Slider functions ====================
+const sliderPopup:HTMLDialogElement | null = document.querySelector('.slider-popup-container')
+const sliderPopupRemover: HTMLButtonElement | null = document.querySelector('.slider-popup-remover')
+
+if(desktopMatchMedia.matches){
+  let slidesHero = document.querySelectorAll('.slider-hero .slide')
+  let slidesPopup = document.querySelectorAll('.slider-popup .slide')
+  let arrowsPopup = document.querySelectorAll('.slider-popup .arrows button')
+
+  slidesHero.forEach(slide => {
+    slide.addEventListener('click', () => {
+      sliderPopup?.showModal()
+    })
+  })
+
+  sliderPopupRemover?.addEventListener('click', () => {
+    sliderPopup?.close()
+  })
+
+  sliderInit(slidesPopup, arrowsPopup)
+
+  // Thumbs function
+  const thumbPopupImages = document.querySelectorAll('.slider-popup .thumbs figure');
+  const thumbHeroImages = document.querySelectorAll('.slider-hero .thumbs figure');
+  slideByThumb(thumbPopupImages, slidesPopup)
+  slideByThumb(thumbHeroImages, slidesHero)
+
+} else {
+  let slides = document.querySelectorAll('.slider-hero .slide')
+  let sliderArrowControls = document.querySelectorAll('.slider-hero .arrows button')
+
+  sliderInit(slides, sliderArrowControls)
+}

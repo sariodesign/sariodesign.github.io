@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository](https://github.com/sariodesign/sariodesign.github.io/tree/main/ecommerce-product-page)
-- Live Site URL: [Vercel live app](https://sariodesign.github.io/ecommerce-product-page/dist/)
+- Live Site URL: [Github live app](https://sariodesign.github.io/ecommerce-product-page/dist/)
 
 ## My process
 

@@ -25,10 +25,10 @@ function checkSliderArrows(slidesRef: NodeList, sliderArrowControls: NodeList) {
 
 // Slider init
 function sliderInit(slides:any, arrows:any) {
-  arrows.forEach(btn => {
+  arrows.forEach((btn:HTMLButtonElement) => {
     btn.addEventListener('click', () => {
       if(slides) {
-        let currentSlide = Array.from(slides).findIndex((slide: Element) => (slide as HTMLElement).dataset.visibility)
+        let currentSlide = Array.from(slides).findIndex(slide => (slide as HTMLElement).dataset.visibility)
         if(btn instanceof HTMLElement) {
           let direction: string | undefined = btn.dataset.action;
           scrollSlider(slides, direction, currentSlide)
@@ -41,14 +41,14 @@ function sliderInit(slides:any, arrows:any) {
 }
 
 // Slider by thumb
-function slideByThumb(thumbs, slides) {
+function slideByThumb(thumbs: NodeList, slides: NodeList) {
   thumbs.forEach((thumb, index) => {
     thumb.addEventListener('click', () => {
-      thumbs.forEach(thumb => thumb.classList.remove('active'))
-      if(!thumb.classList.contains('active')){
-        thumb.classList.add('active')
+      thumbs.forEach(thumb => (thumb as HTMLElement).classList.remove('active'))
+      if(!(thumb as HTMLElement).classList.contains('active')){
+        (thumb as HTMLElement).classList.add('active')
       }
-      slides[index].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+      (slides[index] as HTMLElement).scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
     })
   })
 }

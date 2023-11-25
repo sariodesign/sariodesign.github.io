@@ -33,8 +33,15 @@ function addToCart(quantity:number, product: Product, cart: Element | null) {
   productDelete.classList.add('cart-product-remove')
   productContainer.appendChild(productDelete)
 
+  // Button checkout
+  const checkoutBtn = document.createElement('button')
+  checkoutBtn.classList.add('cart-add-btn')
+  checkoutBtn.textContent = 'Checkout'
+
+
   cart!.innerHTML = '';
   cart?.appendChild(productContainer)
+  cart?.appendChild(checkoutBtn)
 }
 
 export default addToCart

@@ -49,7 +49,6 @@ function slideByThumb(thumbs, slides) {
         thumb.classList.add('active')
       }
       slides[index].scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
-      console.log(index)
     })
   })
 }

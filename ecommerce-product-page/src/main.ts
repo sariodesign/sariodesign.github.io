@@ -92,7 +92,6 @@ openCartBtn?.addEventListener('click', () => {
 addCartBtn?.addEventListener('click', () => {
   if(Number(QUANTITY_DISPLAY!.textContent) > 0) {
     addToCart(Number(QUANTITY_DISPLAY!.textContent), baseProduct, cartContent)
-    console.log('add to cart')
   }
 })
 

@@ -1,1 +1,0 @@
-import{j as a,E as t,o,c as i,t as s}from"./entry.BiojIHcJ.js";const n=["data-slice-type","data-slice-variation"],p=a({__name:"index",props:t(),setup(c){return(e,r)=>(o(),i("section",{"data-slice-type":e.slice.slice_type,"data-slice-variation":e.slice.variation}," Placeholder component for footer_cta (variation: "+s(e.slice.variation)+") Slices ",9,n))}});export{p as default};

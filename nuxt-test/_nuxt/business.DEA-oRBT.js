@@ -1,0 +1,1 @@
+import{j as e,u as s}from"./entry.BiojIHcJ.js";const o=e({__name:"business",setup(n){return s({title:"Business",meta:[{hid:"description",name:"description",content:"Business WiiCabs"}]}),(t,i)=>" Business page "}});export{o as default};
